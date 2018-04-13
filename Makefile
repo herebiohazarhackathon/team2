@@ -234,7 +234,12 @@ DIST          = ../../../Qt/5.10.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.10.1/gcc_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.10.1/gcc_64/mkspecs/features/lex.prf \
 		../team2_sample/team2.pro ../team2_sample/team2.h \
-		../team2_sample/team2_global.h ../team2_sample/team2.cpp
+		../team2_sample/team2_global.h \
+		../team2_sample/unique_chars.h \
+		../team2_sample/huffman.h \
+		../team2_sample/derivative.h \
+		../team2_sample/sort_array.h \
+		../team2_sample/gcd_string.h ../team2_sample/team2.cpp
 QMAKE_TARGET  = team2
 DESTDIR       = 
 TARGET        = libteam2.so.1.0.0
@@ -645,7 +650,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/5.10.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../team2_sample/team2.h ../team2_sample/team2_global.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../team2_sample/team2.h ../team2_sample/team2_global.h ../team2_sample/unique_chars.h ../team2_sample/huffman.h ../team2_sample/derivative.h ../team2_sample/sort_array.h ../team2_sample/gcd_string.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../team2_sample/team2.cpp $(DISTDIR)/
 
 
@@ -717,7 +722,12 @@ team2.o: ../team2_sample/team2.cpp ../team2_sample/team2.h \
 		../../../Qt/5.10.1/gcc_64/include/QtCore/qglobalstatic.h \
 		../../../Qt/5.10.1/gcc_64/include/QtCore/qmutex.h \
 		../../../Qt/5.10.1/gcc_64/include/QtCore/qnumeric.h \
-		../../../Qt/5.10.1/gcc_64/include/QtCore/qversiontagging.h
+		../../../Qt/5.10.1/gcc_64/include/QtCore/qversiontagging.h \
+		../team2_sample/derivative.h \
+		../team2_sample/sort_array.h \
+		../team2_sample/unique_chars.h \
+		../team2_sample/gcd_string.h \
+		../team2_sample/huffman.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o team2.o ../team2_sample/team2.cpp
 
 ####### Install
