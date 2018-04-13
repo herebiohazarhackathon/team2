@@ -1,1 +1,5 @@
 team2*
+Makefile
+.*
+*.o
+
