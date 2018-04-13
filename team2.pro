@@ -6,7 +6,7 @@
 
 QT       -= gui
 
-TARGET = team1
+TARGET = team2
 TEMPLATE = lib
 
 DEFINES += TEAM1_LIBRARY
@@ -23,13 +23,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        team1.cpp
+team2.cpp
 
 HEADERS += \
-        team1.h \
-        team1_global.h 
+team2.h \
+team2_global.h
 
 unix {
-    target.path = /usr/lib
-    INSTALLS += target
+target.path = /usr/lib
+INSTALLS += target
 }

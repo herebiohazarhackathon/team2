@@ -1,6 +1,6 @@
-#include "team1.h"
+#include "team2.h"
 
 
-Team1::Team1()
+Team2::Team2()
 {
 }
